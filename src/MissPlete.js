@@ -60,7 +60,7 @@ class MissPlete {
     });
 
     this.input.addEventListener('blur', (event) => {
-      //this.removeDropdown();
+      this.removeDropdown();
       this.highlightedIndex = -1;
     });
   }  // end constructor
@@ -178,9 +178,9 @@ class MissPlete {
   }
 
   removeDropdown() {
-    this.container && this.container.remove();
-    this.container = null;
-    this.ul = null;
+    // this.container && this.container.remove();
+    // this.container = null;
+    // this.ul = null;
   }
 
 }
