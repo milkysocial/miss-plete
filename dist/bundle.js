@@ -144,7 +144,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	
 	    this.input.addEventListener('blur', function (event) {
-	      //this.removeDropdown();
+	      _this.removeDropdown();
 	      _this.highlightedIndex = -1;
 	    });
 	  } // end constructor
@@ -238,9 +238,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }, {
 	    key: 'removeDropdown',
 	    value: function removeDropdown() {
-	      this.container && this.container.remove();
-	      this.container = null;
-	      this.ul = null;
+	      // this.container && this.container.remove();
+	      // this.container = null;
+	      // this.ul = null;
 	    }
 	  }], [{
 	    key: 'scoreFn',
