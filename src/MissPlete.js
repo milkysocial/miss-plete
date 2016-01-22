@@ -60,13 +60,14 @@ class MissPlete {
     });
 
     this.input.addEventListener('blur', (event) => {
-      this.removeDropdown();
+      //this.removeDropdown();
       this.highlightedIndex = -1;
     });
   }  // end constructor
 
-  static scoreFn(inputValue, optionSynonyms) {
+  static scoreFn(inputValue, options) {
     let closestSynonym = null;
+    let optionSynonyms = options[0].names
     for (let synonym of optionSynonyms) {
       let similarity = jaroWinkler(
         synonym.trim().toLowerCase(),
@@ -79,7 +80,8 @@ class MissPlete {
     }
     return {
       score: closestSynonym.similarity,
-      displayValue: optionSynonyms[0]
+      displayValue: optionSynonyms[0],
+      optionId: options[0].id
     };
   }
 
