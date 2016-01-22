@@ -173,14 +173,14 @@ class MissPlete {
   select() {
     if (this.highlightedIndex !== -1) {
       this.input.value = this.scoredOptions[this.highlightedIndex].displayValue;
-      this.removeDropdown();
+      //this.removeDropdown();
     }
   }
 
   removeDropdown() {
-    // this.container && this.container.remove();
-    // this.container = null;
-    // this.ul = null;
+    this.container && this.container.remove();
+    this.container = null;
+    this.ul = null;
   }
 
 }
